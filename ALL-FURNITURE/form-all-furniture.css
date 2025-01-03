@@ -1,0 +1,494 @@
+@import url("https://db.onlinewebfonts.com/c/cd8f6d68932aa055914a429907c639b6?family=Futura+ICG");
+@import url("https://db.onlinewebfonts.com/c/da950f2527dc01bebcbedd536e38c145?family=Futura+Condensed+Medium");
+
+.press-container {
+    background-image: url(https://new.delightfull.eu/wp-content/uploads/2023/09/banner-catalogue-forms.jpg);
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+  }
+
+  /* Estilos do formulário */
+  .form {
+    flex: 1;
+    max-width: 40%;
+    padding: 30px;
+    text-align: left;
+    margin: 4em 10em;
+  }
+
+  .form-title {
+    font-size: 1em;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: "Futura ICG";
+    letter-spacing: 0.1em;
+    color: #fff;
+  }
+
+  .form-title::after {
+    content: "";
+    display: block;
+    width: 5em;
+    height: 2px;
+    background-color: #d10000;
+    margin: 1em auto;
+  }
+
+  .press-description {
+    text-align: center;
+    color: #fff;
+    font-family: "Futura ICG";
+    font-size: 0.9em;
+  }
+
+  .select-profile {
+    color: #fff;
+    font-family: "Futura ICG";
+  }
+
+  /* Campo de perfil de seleção com botão de rádio customizado */
+  .profile-selection {
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    color: #fff;
+    display: flex;
+  }
+
+  /* The container for custom radio buttons */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 25px; /* Adjust for smaller radio */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #fff;
+    user-select: none;
+    text-transform: uppercase;
+  }
+
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button and checkbox style */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px; /* Smaller size */
+    width: 15px; /* Smaller size */
+    background-color: #eee;
+    border: 1px solid rgb(0, 0, 0, 10);
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #fff;
+  }
+
+  /* When the radio button or checkbox is checked, add the custom background color */
+  .container input:checked ~ .checkmark {
+    background-color: #d10000;
+  }
+
+  /* Create the indicator (dot/circle) for radio and checkbox - hidden when not checked */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .checkmark:after {
+    top: 35%; /* Adjusted position for smaller size */
+    left: 29%;
+    width: 6px; /* Smaller inner circle */
+    height: 6px; /* Smaller inner circle */
+    border-radius: 50%;
+    background: white;
+    margin: 0 auto;
+  }
+
+  /* Estilos para inputs e selects */
+  .full-width {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0;
+    font-family: "Futura ICG";
+  }
+
+  .full-width::placeholder {
+    color: #fff;
+  }
+
+  .input-group,
+  .occupation-group,
+  .occupation,
+  .not-provider {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .input-group input,
+  .input-group select,
+  .occupation select,
+  .occupation-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0;
+    font-family: "Futura ICG";
+  }
+
+  .input-group input::placeholder,
+  .input-group select::placeholder {
+    color: #fff;
+  }
+
+  .not-provider input::placeholder {
+    color: #fff;
+    font-family: "Futura ICG";
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .submit-button-form{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    margin: 1em 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 25%; /* adjust width as needed */
+    max-width: 40%;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .submit-button-contact {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 20%; /* adjust width as needed */
+    text-align: center;
+    margin-bottom: 6em;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .press-container {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover; /* Ajuste para ocupar todo o contêiner */
+        background-position: center;
+        overflow-x: hidden;
+        border: 1px solid red;
+    }
+    .form {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow: hidden; 
+    }
+
+    .form-title {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        white-space: normal;
+    }
+
+    .press-description {
+        font-size: 1em;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .profile-selection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .full-width, 
+    .input-group input, 
+    .input-group select, 
+    .occupation-group input, 
+    .occupation-group select {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 1em;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+
+      .button-container {
+          margin-top: 20px;
+      }
+
+      .submit-button-form {
+          width: 30%;
+          font-size: 0.9em;
+          padding: 10px;
+      }
+       
+        .main-container {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+     
+
+        .form-title {
+          font-size: 1.2em;
+          margin-bottom: 15px;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        .select-profile {
+            display: flex;
+            justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+            margin-top: 1em;
+            font-size: 0.8em;
+        }
+
+
+        /* Garante que todos os inputs fiquem em uma coluna */
+        .input-group,
+        .occupation-group {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .full-width,
+        .input-group input,
+        .input-group select,
+        .occupation-group input,
+        .occupation-group select {
+          width: 100%;
+          padding: 10px;
+          font-size: 1em;
+          margin-bottom: 8px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        .submit-button-form:hover {
+          background-color: #d10000;
+        }
+
+        .make-own p,
+        .contact-with p {
+          width: 90%;
+          font-size: 0.9em;
+        }
+
+        .submit-button-contact {
+            width: 19em;
+            font-size: 0.9em;
+        }
+
+        .contact-with h3 {
+            font-size: 2em;
+        }
+
+}
+
+      @media (max-width: 767px) {
+     
+        .press-container {
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        padding: 10px; 
+    }
+
+    .form {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow: hidden; 
+    }
+
+    .form-title {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        white-space: normal;
+    }
+
+    .press-description {
+        font-size: 1em;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+
+    .profile-selection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .full-width, 
+    .input-group input, 
+    .input-group select, 
+    .occupation-group input, 
+    .occupation-group select {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 1em;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+
+      .button-container {
+          margin-top: 20px;
+      }
+
+      .submit-button-form {
+          width: 30%;
+          font-size: 0.9em;
+          padding: 10px;
+      }
+       
+        .main-container {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+     
+
+        .form-title {
+          font-size: 1.2em;
+          margin-bottom: 15px;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        .select-profile {
+            display: flex;
+            justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+            margin-top: 1em;
+            font-size: 0.8em;
+        }
+
+
+        /* Garante que todos os inputs fiquem em uma coluna */
+        .input-group,
+        .occupation-group {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .full-width,
+        .input-group input,
+        .input-group select,
+        .occupation-group input,
+        .occupation-group select {
+          width: 100%;
+          padding: 10px;
+          font-size: 1em;
+          margin-bottom: 8px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        .make-own p,
+        .contact-with p {
+          width: 90%;
+          font-size: 0.9em;
+        }
+
+        .submit-button-contact {
+            width: 19em;
+            font-size: 0.9em;
+        }
+
+        .contact-with h3 {
+            font-size: 2em;
+        }
+
+      }
+
+      @media (max-width: 480px) {
+        .form-title {
+          font-size: 1.2em;
+        }
+
+        .profile-selection {
+          flex-direction: column;
+          gap: 1em;
+        }
+
+        .materials {
+          grid-template-columns: 1fr;
+        }
+
+        .item-material img {
+          max-width: 100%;
+        }
+
+        .submit-button-form {
+          width: 80%;
+        }
+      }

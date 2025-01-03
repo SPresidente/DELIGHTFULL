@@ -1,0 +1,662 @@
+* {
+     box-sizing: border-box;
+ }
+.main-container {
+ display: flex;
+ gap: 30px;
+ max-width: 1920px;
+ width: 100%;
+ align-items: center;
+ font-family: "Futura ICG";
+}
+
+/* Estilos para o slider de imagens */
+.image-slider {
+ flex: 1;
+ max-width: 70em;
+ position: relative;
+ overflow: hidden;
+}
+
+.slider-wrapper {
+ position: relative;
+}
+
+.slide-track {
+ display: flex;
+ transition: transform 1s ease;
+}
+
+.slide-item {
+ min-width: 100%;
+}
+
+.slide-item img {
+ width: 100%;
+ display: block;
+}
+
+.arrow {
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ color: white;
+ font-size: 1.5em;
+ cursor: pointer;
+ background: none;
+ border: none;
+ z-index: 10;
+}
+.arrow-left {
+ left: 10px;
+}
+.arrow-right {
+ right: 10px;
+}
+
+/* Estilos do formulário */
+.form {
+ flex: 1;
+ max-width: 40%;
+ padding: 30px;
+ background-color: #fff;
+ text-align: left;
+}
+
+.form-title {
+ font-size: 1.5em;
+ margin-bottom: 5px;
+ letter-spacing: 1px;
+ text-align: center;
+ font-family: "Futura ICG";
+ letter-spacing: 0.1em;
+ color: #333;
+}
+
+.form-title::after {
+ content: "";
+ display: block;
+ width: 5em;
+ height: 2px;
+ background-color: #d10000;
+ margin: 1em auto;
+}
+
+/* Campo de perfil de seleção com botão de rádio customizado */
+.profile-selection {
+ text-align: left;
+ margin-bottom: 20px;
+ font-size: 0.9em;
+ letter-spacing: 1px;
+}
+
+/* The container for custom radio buttons */
+.container {
+ display: block;
+ position: relative;
+ padding-left: 25px; /* Adjust for smaller radio */
+ margin-bottom: 12px;
+ cursor: pointer;
+ font-size: 0.8em;
+ font-weight: bold;
+ color: #333;
+ user-select: none;
+ text-transform: uppercase;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+}
+
+/* Create a custom radio button and checkbox style */
+.checkmark {
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 15px; /* Smaller size */
+ width: 15px; /* Smaller size */
+ background-color: #eee;
+ border: 1px solid rgb(0, 0, 0, 10);
+ border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+ background-color: #fff;
+}
+
+/* When the radio button or checkbox is checked, add the custom background color */
+.container input:checked ~ .checkmark {
+ background-color: #d10000;
+}
+
+/* Create the indicator (dot/circle) for radio and checkbox - hidden when not checked */
+.checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+ display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkmark:after {
+ top: 35%; /* Adjusted position for smaller size */
+ left: 29%;
+ width: 6px; /* Smaller inner circle */
+ height: 6px; /* Smaller inner circle */
+ border-radius: 50%;
+ background: white;
+ margin: 0 auto;
+}
+
+.full-width {
+ width: 100%;
+ padding: 12px;
+ margin-bottom: 15px;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ font-size: 1em;
+ box-sizing: border-box;
+ background-color: transparent;
+ color: gray;
+ border-radius: 0;
+ font-family: "Futura ICG";
+}
+
+.full-width::placeholder {
+ color: gray;
+}
+
+.input-group,
+.occupation-group,
+.occupation,
+.not-provider {
+ display: flex;
+ gap: 10px;
+ margin-bottom: 15px;
+ width: 100%;
+}
+
+ .input-group input,
+ .input-group select,
+ .occupation select,
+ .occupation-group input {
+ width: 100%;
+ padding: 12px;
+ border: 1px solid #ddd;
+ font-size: 1em;
+ box-sizing: border-box;
+ background-color: transparent;
+ color: gray;
+ border-radius: 0;
+ font-family: "Futura ICG";
+}
+
+
+
+
+.button-container {
+ display: flex;
+ justify-content: center;
+ margin-top: 2em;
+}
+
+.submit-button {
+ background-color: black;
+ color: #fff;
+ border: none;
+ padding: 12px 20px;
+ font-size: 1em;
+ cursor: pointer;
+ text-transform: uppercase;
+ width: 20%; /* adjust width as needed */
+ text-align: center;
+}
+
+.submit-button:hover {
+ background-color: red;
+}
+
+.unique-projects h3,
+.most-wanted h3,
+.more-to-explore-title h3,
+.room-by-room h3,
+.unique-partners h3,
+.most-desirable h3 {
+ font-family: "Futura Regular";
+ text-align: center;
+ font-size: 1.8rem;
+ letter-spacing: 2px;
+ color: #242424;
+}
+
+.unique-projects p,
+.most-wanted p,
+.room-by-room p,
+.unique-partners p {
+ text-align: center;
+ font-size: 0.9em;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ font-weight: 500;
+ max-width: 100%;
+ word-wrap: break-word;
+ padding: 0 10em;
+ padding-bottom: 3em;
+}
+
+nav {
+ display: flex; /* Torna o nav um contêiner flexível */
+ justify-content: center; /* Centraliza os itens dentro do nav */
+ width: 100%; /* Certifica que o nav ocupe toda a largura */
+ padding: 10px 0;
+}
+
+nav .room-by-room {
+ z-index: 10;
+ display: flex;
+ justify-content: center; /* Centraliza horizontalmente */
+ align-items: center; /* Alinha verticalmente */
+ text-align: center;
+ max-width: 800px; /* Largura máxima da barra de navegação */
+ margin: 0 auto; /* Centraliza a barra de navegação em relação à página */
+}
+
+/* Transição suave para o estilo do link */
+nav .room-by-room a {
+ font-family: "Futura IGC", Arial, Helvetica, sans-serif;
+ margin: 0 30px;
+ text-decoration: none;
+ font-size: 11px;
+ color: black;
+ cursor: pointer;
+ position: relative; /* Necessário para o uso de ::after */
+ transition: transform 0.3s ease, font-weight 0.3s ease;
+ font-weight: bold;
+}
+
+/* Adiciona a linha abaixo do link ativo */
+nav .room-by-room a::after {
+ content: "";
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ bottom: -8px;
+ width: 150%; /* O comprimento da linha, maior que o texto */
+ height: 3px;
+ background-color: black;
+ opacity: 0;
+ transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+/* Estilo para o link ativo com transição suave */
+nav .room-by-room a.active::after {
+ opacity: 1; /* Mostra a linha ao ativar o link */
+}
+
+/* Efeito hover no link */
+
+#image-container.room-by-room {
+ margin: 0; /* Remove margins */
+ padding: 0; /* Remove padding if any */
+ position: relative; /* Garante que as imagens fiquem dentro desse contêiner */
+}
+
+/* Adicionei transição para as imagens */
+#image-container.room-by-room img {
+ max-width: 100%;
+ height: auto;
+ opacity: 0;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 0;
+ margin: 0;
+ padding: 0;
+ margin-bottom: 20px;
+ margin-top: 30px;
+}
+
+/* Classe para mostrar a imagem com transição */
+#image-container.room-by-room img.show {
+ opacity: 1;
+ position: relative;
+ z-index: 1;
+}
+
+.most-desirable-container {
+ display: flex;
+ gap: 40px; /* Espaçamento entre as imagens */
+ text-align: center;
+ margin: 5em 0;
+}
+.most-desirable-item {
+ width: 300px; /* Largura de cada item */
+ transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out; /* Transição mais longa e suave */
+ margin: 0 auto;
+ justify-content: center;
+}
+.most-desirable-imgs {
+ width: 100%;
+ height: 16em;
+ position: relative;
+ overflow: hidden;
+ margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+ border-radius: 8px; /* Bordas arredondadas, opcional */
+}
+.most-desirable-imgs img {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Suaviza a transição de opacidade e expansão */
+}
+.most-desirable-imgs:hover img {
+ transform: scale(1.1); /* Expande a imagem ao passar o mouse */
+}
+.most-desirable-imgs img.hover {
+ opacity: 0; /* Esconde as imagens de hover inicialmente */
+}
+.most-desirable-imgs:hover img.hover {
+ opacity: 1; /* Mostra a imagem de hover ao passar o mouse */
+}
+.most-desirable-imgs:hover img:not(.hover) {
+ opacity: 0; /* Esconde a imagem original ao passar o mouse */
+}
+
+.most-desirable-item:hover {
+ transform: scale(1.05); /* Leve aumento no tamanho */
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave ao passar o mouse */
+}
+
+.title {
+ font-weight: bold;
+ font-size: 16px;
+ margin: 0;
+}
+.subtitle {
+ font-size: 14px;
+ color: black;
+ margin: 0;
+}
+
+.title a {
+ text-decoration: none;
+ color: black;
+}
+
+.title a:hover {
+ color: #7a7a7a;
+}
+@media (max-width: 767px) {
+ .most-desirable-container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+   width: 100%;
+ }
+
+ .most-desirable-item {
+   width: 100%;
+   text-align: center;
+   transition: none; /* Remove a transição de hover */
+ }
+
+ .most-desirable-imgs {
+   height: 140px;
+   width: 80%;
+ }
+
+ .most-desirable-imgs img {
+   transform: none; /* Remove o efeito de transformação no hover */
+   opacity: 1; /* Mantém todas as imagens visíveis */
+ }
+
+ /* Remover os efeitos de hover */
+ .most-desirable-imgs:hover img {
+   transform: none;
+ }
+
+ .most-desirable-imgs img.hover {
+   opacity: 0;
+ }
+
+ .most-desirable-item:hover {
+   transform: none; /* Remove o aumento no hover */
+   box-shadow: none; /* Remove a sombra no hover */
+ }
+
+ .main-container {
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+ .form {
+   max-width: 100%;
+   width: 100%;
+   margin: 0 auto;
+   padding: 10px 20px;
+   text-align: center;
+   box-sizing: border-box;
+ }
+
+ .form-title {
+   font-size: 1.2em;
+   margin-bottom: 15px;
+   text-align: center;
+   white-space: nowrap;
+ }
+
+ /* Garante que todos os inputs fiquem em uma coluna */
+ .input-group,
+ .occupation-group {
+   flex-direction: column;
+   gap: 0;
+ }
+
+ .full-width,
+ .input-group input,
+ .input-group select,
+ .occupation-group input,
+ .occupation-group select {
+   width: 100%;
+   padding: 10px;
+   font-size: 1em;
+   margin-bottom: 8px;
+   box-sizing: border-box;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
+
+ .submit-button {
+   width: 100%;
+   font-size: 1em;
+   padding: 10px;
+   background-color: black;
+   color: white;
+   border: none;
+   text-transform: uppercase;
+   cursor: pointer;
+   margin-top: 10px;
+ }
+
+ .submit-button:hover {
+   background-color: #d10000;
+ }
+
+ .unique-projects p,
+ .most-wanted p,
+ .room-by-room p,
+ .unique-partners p {
+   text-align: center;
+   font-size: 1em;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   font-weight: 100;
+   max-width: 100%;
+   padding: 0 5vw;
+   padding-bottom: 2em;
+ }
+
+ .title {
+   font-size: 0.9em;
+   font-weight: bold;
+   margin: 3px 0; /* Espaço compacto entre o título e a imagem */
+   color: black;
+   text-transform: uppercase;
+ }
+
+ .subtitle {
+   font-size: 0.75em;
+   color: gray;
+   margin: 2px 0 0; /* Espaço compacto entre o subtítulo e o título */
+ }
+}
+
+@media screen and (min-width: 768px) and (max-width:1122px){
+ .main-container {
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+ .form {
+   max-width: 100%;
+   width: 100%;
+   margin: 0 auto;
+   padding: 10px 20px;
+   box-sizing: border-box;
+ }
+
+ .form-title {
+   font-size: 1.2em;
+   margin-bottom: 15px;
+   text-align: center;
+   white-space: nowrap;
+ }
+
+ 
+ .input-group,
+ .occupation-group {
+   flex-direction: column;
+   gap: 0;
+ }
+
+ .full-width,
+ .input-group input,
+ .input-group select,
+ .occupation-group input,
+ .occupation-group select {
+   width: 100%;
+   padding: 10px;
+   font-size: 1em;
+   margin-bottom: 8px;
+   box-sizing: border-box;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+ }
+
+ .submit-button {
+   width: 100%;
+   font-size: 1em;
+   padding: 10px;
+   background-color: black;
+   color: white;
+   border: none;
+   text-transform: uppercase;
+   cursor: pointer;
+   margin-top: 10px;
+ }
+
+ .submit-button:hover {
+   background-color: #d10000;
+ }
+
+ .unique-projects p,
+ .most-wanted p,
+ .room-by-room p,
+ .unique-partners p {
+   text-align: center;
+   font-size: 1em;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   font-weight: 100;
+   max-width: 100%;
+   padding: 0 5vw;
+   padding-bottom: 2em;
+ }
+
+ .title {
+   font-size: 0.9em;
+   font-weight: bold;
+   margin: 3px 0; 
+   color: black;
+   text-transform: uppercase;
+ }
+
+ .subtitle {
+   font-size: 0.75em;
+   color: gray;
+   margin: 2px 0 0; 
+ }
+
+ .most-desirable-container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+   width: 100%;
+ }
+
+ .most-desirable-item {
+   width: 100%;
+   text-align: center;
+   transition: none; 
+ }
+
+ .most-desirable-imgs {
+   height: 200px;
+   width: 60%;
+   margin: 0 auto;
+ }
+
+ .most-desirable-imgs img {
+   transform: none; 
+   opacity: 1; 
+ }
+
+ 
+ .most-desirable-imgs:hover img {
+   transform: none;
+ }
+
+ .most-desirable-imgs img.hover {
+   opacity: 0;
+ }
+
+ .most-desirable-item:hover {
+   transform: none; 
+   box-shadow: none; 
+ }
+
+ .img-container h2{
+     font-size: 0.7em;
+ } 
+
+ .img-container .overlay-img {
+     width: 150px; /* Tamanho inicial da imagem sobreposta */
+     height: auto;
+ }
+}

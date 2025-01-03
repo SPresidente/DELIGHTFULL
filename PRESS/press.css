@@ -1,0 +1,608 @@
+@import url(https://db.onlinewebfonts.com/c/7150534f1c3c68d8ed34eb3090c126b3?family=Futura+Regular);
+@import url(https://db.onlinewebfonts.com/c/cd8f6d68932aa055914a429907c639b6?family=Futura+ICG);
+
+.press-container {
+background-image: url(https://new.delightfull.eu/wp-content/uploads/2022/09/samples-delightfull-1.jpg);
+width: 100%;
+height: auto;
+min-height: 100vh;
+background-size: cover;
+background-position: center;
+overflow-x: hidden;
+}
+
+.main-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos do formulário */
+.form {
+flex: 1;
+max-width: 40%;
+padding: 30px;
+text-align: left;
+margin: 4em 10em;
+}
+
+.form-title {
+font-size: 1em;
+margin-bottom: 5px;
+letter-spacing: 1px;
+text-align: center;
+font-family: "Futura ICG";
+letter-spacing: 0.1em;
+color: #fff;
+}
+
+.form-title::after {
+content: "";
+display: block;
+width: 5em;
+height: 2px;
+background-color: #d10000;
+margin: 1em auto;
+}
+
+.press-description {
+text-align: center;
+color: #fff;
+font-family: "Futura ICG";
+font-size: 0.9em;
+}
+
+.select-profile{
+color: #fff;
+font-family: "Futura ICG";
+}
+
+/* Campo de perfil de seleção com botão de rádio customizado */
+.profile-selection {
+justify-content: left;
+gap: 10px;
+margin-bottom: 20px;
+font-size: 0.9em;
+letter-spacing: 1px;
+color: #fff;
+display: flex;
+}
+
+/* The container for custom radio buttons */
+.container {
+display: block;
+position: relative;
+padding-left: 25px; /* Adjust for smaller radio */
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 0.8em;
+font-weight: bold;
+color: #fff;
+user-select: none;
+text-transform: uppercase;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+/* Create a custom radio button and checkbox style */
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 15px; /* Smaller size */
+width: 15px; /* Smaller size */
+background-color: #eee;
+border: 1px solid rgb(0, 0, 0, 10);
+border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+background-color: #fff;
+}
+
+/* When the radio button or checkbox is checked, add the custom background color */
+.container input:checked ~ .checkmark {
+background-color: #d10000;
+}
+
+/* Create the indicator (dot/circle) for radio and checkbox - hidden when not checked */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkmark:after {
+top: 35%; /* Adjusted position for smaller size */
+left: 29%;
+width: 6px; /* Smaller inner circle */
+height: 6px; /* Smaller inner circle */
+border-radius: 50%;
+background: white;
+margin: 0 auto;
+}
+
+/* Estilos para inputs e selects */
+.full-width {
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+border: 1px solid #fff;
+border-radius: 4px;
+font-size: 1em;
+box-sizing: border-box;
+background-color: transparent;
+color: #fff;
+border-radius: 0;
+font-family: "Futura ICG";
+}
+
+.full-width::placeholder {
+color: #fff;
+}
+
+.input-group,
+.occupation-group,
+.occupation,
+.not-provider {
+display: flex;
+gap: 10px;
+margin-bottom: 15px;
+width: 100%;
+}
+
+.input-group input,
+.input-group select,
+.occupation select,
+.occupation-group input {
+width: 100%;
+padding: 12px;
+border: 1px solid #ddd;
+font-size: 1em;
+box-sizing: border-box;
+background-color: transparent;
+color: #fff;
+border-radius: 0;
+font-family: "Futura ICG";
+}
+
+.input-group input::placeholder,
+.input-group select::placeholder {
+color: #fff;
+}
+
+
+.not-provider input::placeholder {
+color:#fff;
+font-family: "Futura ICG";
+}
+
+.text-area textarea{
+background-color: transparent;
+width: 100%;
+height: 12em;
+resize: vertical;
+border: 1px solid #fff;
+color: #fff;
+margin-bottom: 2em;
+font-family: "Futura ICG";
+}
+
+.text-area textarea::placeholder {
+color: #fff;
+font-family: "Futura ICG";
+}
+
+.button-container {
+display: flex;
+justify-content: center;
+margin-top: 2em;
+}
+
+.submit-button {
+background-color: black;
+color: #fff;
+border: none;
+padding: 12px 20px;
+font-size: 1em;
+cursor: pointer;
+text-transform: uppercase;
+width: 40%; /* adjust width as needed */
+text-align: center;
+white-space: nowrap;
+}
+
+.submit-button:hover {
+background-color: red;
+}
+
+.unique-projects h3,
+.most-wanted h3,
+.more-to-explore-title h3,
+.room-by-room h3,
+.unique-partners h3,
+.most-desirable h3 {
+font-family: "Futura Regular";
+text-align: center;
+font-size: 1.8rem;
+letter-spacing: 2px;
+color: #242424;
+}
+
+.unique-projects p,
+.most-wanted p,
+.room-by-room p,
+.unique-partners p {
+text-align: center;
+font-size: 0.9em;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+font-weight: 500;
+max-width: 100%;
+word-wrap: break-word;
+padding: 0 10em;
+padding-bottom: 3em;
+}
+
+nav {
+display: flex; /* Torna o nav um contêiner flexível */
+justify-content: center; /* Centraliza os itens dentro do nav */
+width: 100%; /* Certifica que o nav ocupe toda a largura */
+padding: 10px 0;
+}
+
+nav .room-by-room {
+z-index: 10;
+display: flex;
+justify-content: center; /* Centraliza horizontalmente */
+align-items: center; /* Alinha verticalmente */
+text-align: center;
+max-width: 800px; /* Largura máxima da barra de navegação */
+margin: 0 auto; /* Centraliza a barra de navegação em relação à página */
+}
+
+/* Transição suave para o estilo do link */
+nav .room-by-room a {
+font-family: "Futura IGC", Arial, Helvetica, sans-serif;
+margin: 0 30px;
+text-decoration: none;
+font-size: 11px;
+color: black;
+cursor: pointer;
+position: relative; /* Necessário para o uso de ::after */
+transition: transform 0.3s ease, font-weight 0.3s ease;
+font-weight: bold;
+}
+
+/* Adiciona a linha abaixo do link ativo */
+nav .room-by-room a::after {
+content: "";
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: -8px;
+width: 150%; /* O comprimento da linha, maior que o texto */
+height: 3px;
+background-color: black;
+opacity: 0;
+transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+/* Estilo para o link ativo com transição suave */
+nav .room-by-room a.active::after {
+opacity: 1; /* Mostra a linha ao ativar o link */
+}
+
+/* Efeito hover no link */
+
+#image-container.room-by-room {
+margin: 0; /* Remove margins */
+padding: 0; /* Remove padding if any */
+position: relative; /* Garante que as imagens fiquem dentro desse contêiner */
+}
+
+/* Adicionei transição para as imagens */
+#image-container.room-by-room img {
+max-width: 100%;
+height: auto;
+opacity: 0;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 0;
+margin: 0;
+padding: 0;
+margin-bottom: 20px;
+margin-top: 30px;
+}
+
+/* Classe para mostrar a imagem com transição */
+#image-container.room-by-room img.show {
+opacity: 1;
+position: relative;
+z-index: 1;
+}
+@media screen and (min-width: 768px) and (max-width:1122px){
+
+.press-container {
+height: auto;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center;
+padding: 10px; 
+}
+
+.main-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.form {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.form-title {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.input-group,
+.occupation-group {
+  flex-direction: column;
+  gap: 0;
+  border: none;
+}
+
+.full-width,
+.input-group input,
+.input-group select,
+.occupation-group input,
+.occupation-group select,
+.text-area textarea  {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.text-area textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 30%;
+  font-size: 1em;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #d10000;
+}
+
+.unique-projects p,
+.most-wanted p,
+.room-by-room p,
+.unique-partners p {
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 100;
+  max-width: 100%;
+  padding: 0 5vw;
+  padding-bottom: 2em;
+}
+
+.title {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 3px 0; 
+  color: black;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 0.75em;
+  color: gray;
+  margin: 2px 0 0; 
+}
+
+
+}
+
+@media (max-width: 767px) {
+
+
+.press-container {
+height: auto;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center;
+padding: 10px; 
+}
+
+.form {
+max-width: 100%;
+width: 100%;
+margin: 0;
+padding: 15px;
+box-sizing: border-box;
+overflow: hidden; 
+}
+
+.form-title {
+margin-bottom: 10px;
+font-size: 1.5em;
+white-space: normal;
+}
+
+.press-description {
+font-size: 1em;
+margin-bottom: 20px;
+line-height: 1.4;
+}
+
+.profile-selection {
+flex-direction: column;
+align-items: flex-start;
+gap: 5px;
+margin-bottom: 20px;
+}
+
+.full-width, 
+.input-group input, 
+.input-group select, 
+.occupation-group input, 
+.occupation-group select, 
+.text-area textarea {
+width: 100%;
+box-sizing: border-box;
+font-size: 1em;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+.text-area textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.submit-button {
+  width: 100%;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.main-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.form-title {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.select-profile {
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+
+
+/* Garante que todos os inputs fiquem em uma coluna */
+.input-group,
+.occupation-group {
+  flex-direction: column;
+  gap: 0;
+}
+
+.full-width,
+.input-group input,
+.input-group select,
+.occupation-group input,
+.occupation-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  width: 60%;
+  font-size: 1em;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #d10000;
+}
+
+.unique-projects p,
+.most-wanted p,
+.room-by-room p,
+.unique-partners p {
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 100;
+  max-width: 100%;
+  padding: 0 5vw;
+  padding-bottom: 2em;
+}
+
+.title {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 3px 0; /* Espaço compacto entre o título e a imagem */
+  color: black;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 0.75em;
+  color: gray;
+  margin: 2px 0 0; /* Espaço compacto entre o subtítulo e o título */
+}
+}

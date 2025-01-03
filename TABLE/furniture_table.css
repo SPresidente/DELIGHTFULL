@@ -1,0 +1,259 @@
+@import url("https://db.onlinewebfonts.com/c/cd8f6d68932aa055914a429907c639b6?family=Futura+ICG");
+@import url("https://db.onlinewebfonts.com/c/da950f2527dc01bebcbedd536e38c145?family=Futura+Condensed+Medium");
+@import url("https://db.onlinewebfonts.com/c/e8c6a63541de0a4211a9358cbe74690f?family=Futura+Medium");
+
+.menu-furniture {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding: 10px 0;
+background-color: #f9f9f9;
+position: fixed; /* Menu fixo no topo */
+top: 0;
+left: 0;
+right: 0;
+z-index: 10; /* Garante que o menu fique sobre o conteúdo */
+width: 100%;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar o menu */
+transition: padding 0.3s; /* Adiciona transição para suavizar */
+margin-bottom: 50em;
+}
+
+.menu-item {
+text-align: center;
+position: relative;
+flex: 0 0 14.2857%; /* Cada item ocupa 1/7 do total */
+box-sizing: border-box;
+padding: 10px;
+transition: transform 0.3s, padding 0.3s;
+}
+.menu-item img {
+width: 80%; /* Imagem ocupa 100% da largura do item */
+height: auto; /* A altura é ajustada automaticamente */
+object-fit: cover;
+border-radius: 8px; /* Bordas arredondadas (opcional) */
+transition: width 0.3s, height 0.3s; /* Transições suaves */
+}
+.menu-item a {
+font-family: "Futura Medium";
+text-decoration: none;
+color: #000;
+font-size: 0.7em;
+display: block;
+margin-top: 10px;
+transition: color 0.3s, font-size 0.3s; /* Transição suave para a fonte */
+letter-spacing: 2px;
+}
+
+/* Estilo da linha colorida */
+.menu-item .line {
+width: 0;
+height: 2px;
+background-color: transparent;
+position: absolute;
+top: 80%; /* Fica entre a imagem e o texto */
+left: 50%;
+transform: translateX(-50%);
+transition: width 0.3s, background-color 0.3s;
+}
+
+.menu-item .line.sticky {
+position: sticky;
+top: 185px; /* Ajusta o comportamento durante o scroll */
+}
+
+/* Hover: altera a cor do texto e mostra a linha */
+.menu-item:hover a {
+color: var(--hover-color);
+}
+
+.menu-item:hover .line {
+width: 100%;
+background-color: var(--hover-color);
+}
+
+/* Estado ativo */
+.menu-item.active a {
+color: var(--hover-color);
+}
+
+.menu-item.active .line {
+width: 100%;
+background-color: var(--hover-color);
+}
+
+/* Cores por categoria */
+.menu-item.new-products {
+--hover-color: #B48365;
+}
+
+.menu-item.most-wanted {
+--hover-color: #E26550;
+}
+
+.menu-item.suspension-lamp {
+--hover-color: #C61482;
+}
+
+.menu-item.floor-lamps {
+--hover-color: #0378A7;
+}
+
+.menu-item.wall-lamps {
+--hover-color: #EC6922;
+}
+
+.menu-item.table-lamps {
+--hover-color: #5EBDA8;
+}
+
+.menu-item.graphic-collection {
+--hover-color: #E12028;
+}
+.new-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.new-products-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #E6E6E6;
+}
+
+.product h4 {
+  font-size: 14px;
+  font-family: "Futura ICG", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.new-products-section h3 {
+  font-family: "Futura Condensed Medium", sans-serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #242424;
+  padding-top: 70px;
+  margin-top: 13em;
+}
+
+.new-products-section p {
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Futura ICG", sans-serif;
+  text-align: center;
+  width: 100%;
+  color: #242424;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.submit-button {
+  width: 50%;
+  font-size: 13px;
+  background-color: #232323;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Futura ICG", sans-serif;
+  letter-spacing: 1px;
+}
+
+.grid-container-table {
+display: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-furniture {
+  display: none;
+}
+
+.new-products-grid,
+.most-wanted-grid {
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas para telas menores */
+}
+.grid-container-table {
+display: block;
+background: #efefef;
+font-family: "Rubik", sans-serif;
+}
+
+.main {
+color: #959595;
+background-color: white;
+padding: 0;
+overflow-x: scroll;
+overflow-y: hidden;
+text-align: center;
+}
+
+.items {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+scroll-snap-type: x mandatory;
+}
+
+.item {
+flex: 0 0 100%;
+scroll-snap-align: start;
+min-height: 400px;
+padding: 10px;
+box-sizing: border-box;
+}
+
+.item img {
+width: 100%;
+height: auto;
+max-width: 400px;
+max-height: 400px;
+}
+
+.items a {
+text-decoration: none;
+}
+
+.item1 img { border-bottom: 2px solid #B48365; }
+.item2 img { border-bottom: 2px solid #E26550; }
+.item3 img { border-bottom: 2px solid #C61482; }
+.item4 img { border-bottom: 2px solid #5EBDA8; }
+.item5 img { border-bottom: 2px solid #EC6922; }
+
+.item1 a { color: #B48365; }
+.item2 a { color: #E26550; }
+.item3 a { color: #C61482; }
+.item4 a { color: #5EBDA8; }
+.item5 a { color: #EC6922; }
+  
+}
+
+@media (max-width: 480px) {
+  .new-products-grid,
+  .most-wanted-grid {
+      grid-template-columns: 1fr; /* Uma coluna para telas muito pequenas */
+  }
+
+.submit-button {
+  width: 90%; /* Botão mais largo em telas pequenas */
+}
+}
